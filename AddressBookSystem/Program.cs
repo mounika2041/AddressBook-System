@@ -11,7 +11,9 @@ namespace AddressBookSystem
        
          static void Main(string[] args)
          {
+            Console.WriteLine("welcome to address book");
             Person.AddPerson();
+            Person.Modify();
             Person.ListPeople();
             Console.ReadLine();
          }
