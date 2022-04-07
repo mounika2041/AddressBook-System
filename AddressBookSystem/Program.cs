@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace AddressBookSystem
 {
-    class Program
+   class Program
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("welcome to address book system");
+       
+         static void Main(string[] args)
+         {
+            Person.AddPerson();
+            Person.ListPeople();
             Console.ReadLine();
-        }
+         }
     }
 }
