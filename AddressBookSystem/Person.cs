@@ -54,15 +54,15 @@ namespace AddressBookSystem
             Console.WriteLine("---------------------------------");
 
         }
-        public static void Modify()
+        public static void modify()
         {
             if (people.Count != 0)
             {
                 Console.WriteLine("Enter the contact to modify:");
-                string Modified = Console.ReadLine();
+                string Modify = Console.ReadLine();
                 foreach (var person in people)
                 {
-                    if (person.FirstName.ToUpper() == Modified.ToUpper())
+                    if (person.FirstName.ToUpper() == Modify.ToUpper())
                     {
                         while (true)
                         {
@@ -129,6 +129,24 @@ namespace AddressBookSystem
 
             }
         }
+        //Delete the detail
+        public static void Delete()
+        {
+            Console.WriteLine("Enter the first name of the person you would like to Delete.");
+            string Delete = Console.ReadLine();
+            foreach (var person in people.ToList())
+            {
+                if (person.FirstName.ToUpper() == Delete.ToUpper())
+                {
+                    people.Remove(person);
+                    Console.WriteLine("Contact is deleted");
+                }
+                else
+                {
+                    Console.WriteLine("Contact is not present");
+                }
+            }
+        }
 
         public static void ListPeople()
         {
@@ -140,7 +158,7 @@ namespace AddressBookSystem
             }
             else
             {
-                Console.WriteLine("here are the modified current people in your address book:\n");
+                Console.WriteLine("here are the current people in your address book:\n");
                 foreach (var person in people)
                 {
                     PrintPerson(person);

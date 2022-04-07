@@ -13,7 +13,8 @@ namespace AddressBookSystem
          {
             Console.WriteLine("welcome to address book");
             Person.AddPerson();
-            Person.Modify();
+            Person.modify();
+            Person.Delete();
             Person.ListPeople();
             Console.ReadLine();
          }
