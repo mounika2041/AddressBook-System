@@ -24,15 +24,18 @@ namespace AddressBookSystem
                 {
                     case "1":
                         Person.AddPerson();
+                        Person.ListPeople();
                         break;
                     case "2":
                         Person.modify();
+                        Person.ListPeople();
                         break;
                     case "3":
                         Person.ListPeople();
                         break;
                     case "4":
                         Person.Delete();
+                        Person.ListPeople();
                         break;
                     default:
                         Console.WriteLine("Enter a valid option");
